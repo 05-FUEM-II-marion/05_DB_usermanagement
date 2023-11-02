@@ -37,4 +37,7 @@ mysql -u admin -p
 
 SHOW GRANTS FOR 'admin'@'localhost';
 
+ -- Anlegen allg. USER
+ CREATE USER 'max'@'localhost' IDENTIFIED BY 'max';
  
+mysql -u max -p 
