@@ -36,4 +36,5 @@ FLUSH PRIVILEGES;
 mysql -u admin -p
 
 SHOW GRANTS FOR 'admin'@'localhost';
+
  
