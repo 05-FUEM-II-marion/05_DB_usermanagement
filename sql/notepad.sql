@@ -57,4 +57,19 @@ SHOW DATABASES;
 SELECT * FROM mydb.employees;
 SELECT * FROM mydb.countries;
 
-DROP TABLE mydb.employees;
+-- keine Berechtigung
+DROP TABLE mydb.employees; 
+
+-- als admin
+GRANT
+	DROP
+	ON *.*
+	TO 'max'@'localhost';
+FLUSH PRIVILEGES;
+
+-- Berechtigung entziehen
+REVOKE
+	DROP
+	ON *.*
+	FROM 'max'@'localhost';
+FLUSH PRIVILEGES;
