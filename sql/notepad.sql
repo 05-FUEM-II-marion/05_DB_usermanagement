@@ -41,3 +41,20 @@ SHOW GRANTS FOR 'admin'@'localhost';
  CREATE USER 'max'@'localhost' IDENTIFIED BY 'max';
  
 mysql -u max -p 
+
+SHOW PRIVILEGES;
+SHOW GRANTS FOR 'max'@'localhost';
+
+GRANT
+	SHOW DATABASES, SELECT
+	ON *.*
+	TO 'max'@'localhost';
+	
+FLUSH PRIVILEGES;
+
+-- login als max
+SHOW DATABASES;
+SELECT * FROM mydb.employees;
+SELECT * FROM mydb.countries;
+
+DROP TABLE mydb.employees;
