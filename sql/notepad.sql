@@ -7,4 +7,16 @@ SELECT * FROM mydb.employees;
 SELECT * FROM mydb.countries;
 
 SELECT user();
+
+-- user-Tabelle
+SHOW DATABASES;
+USE mysql;
+SHOW TABLES;
+
+DESCRIBE mysql.user;
+
+SELECT
+    user,
+    authentication_string 
+FROM mysql.user;
  
