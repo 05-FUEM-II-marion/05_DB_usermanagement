@@ -15,8 +15,25 @@ SHOW TABLES;
 
 DESCRIBE mysql.user;
 
+-- USER ANLEGEN
 SELECT
     user,
     authentication_string 
 FROM mysql.user;
+ 
+ -- Anlegen SUPERUSER / ADMIN
+ CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+ 
+ -- Plugins
+ SELECT
+    user,
+    plugin
+FROM mysql.user;
+
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+mysql -u admin -p
+
+SHOW GRANTS FOR 'admin'@'localhost';
  
