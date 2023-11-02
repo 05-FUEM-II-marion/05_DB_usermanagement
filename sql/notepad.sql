@@ -73,3 +73,5 @@ REVOKE
 	ON *.*
 	FROM 'max'@'localhost';
 FLUSH PRIVILEGES;
+
+DROP USER 'max'@'localhost';
